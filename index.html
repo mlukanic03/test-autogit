@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Test Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #0f3460;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #e94560, #0f3460, #53d8fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s ease-in-out infinite alternate;
+        }
+        @keyframes shimmer {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(40deg); }
+        }
+        header p { color: #888; margin-top: 0.5rem; }
+
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: #1a1a2e;
+            border: 1px solid #222244;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.15);
+            border-color: #e94560;
+        }
+        .card h3 { color: #e94560; margin-bottom: 0.5rem; }
+        .card p { color: #999; font-size: 0.9rem; line-height: 1.5; }
+
+        .counter-section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 1px solid #222244;
+        }
+        .counter-section h2 { margin-bottom: 1rem; color: #53d8fb; }
+        #count {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #e94560;
+            display: block;
+            margin: 1rem 0;
+            transition: transform 0.1s;
+        }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+        .btn-red { background: #e94560; color: white; }
+        .btn-blue { background: #0f3460; color: white; }
+        .btn-teal { background: #1a8a7d; color: white; }
+        .btn:hover { filter: brightness(1.2); transform: scale(1.05); }
+
+        .color-box {
+            width: 100%;
+            height: 120px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #e94560, #0f3460);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s;
+            border: 1px solid #333;
+        }
+
+        .todo-section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #222244;
+        }
+        .todo-section h2 { color: #53d8fb; margin-bottom: 1rem; }
+        .todo-input {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .todo-input input {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+        .todo-input input:focus { outline: none; border-color: #e94560; }
+        #todo-list { list-style: none; }
+        #todo-list li {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: opacity 0.3s;
+        }
+        #todo-list li:hover { background: rgba(233, 69, 96, 0.05); }
+        #todo-list li.done span { text-decoration: line-through; color: #555; }
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #e94560;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #444;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ Random Test Page</h1>
+        <p>A little playground with cards, counters, colors & todos</p>
+    </header>
+
+    <div class="container">
+        <div class="card-grid">
+            <div class="card">
+                <h3>🚀 Card One</h3>
+                <p>This is a hover-interactive card. Move your mouse over it to see the lift effect and glow border.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Card Two</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula tortor nec libero fermentum.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 Card Three</h3>
+                <p>Grid layout auto-fits columns so these cards rearrange responsively on different screen sizes.</p>
+            </div>
+        </div>
+
+        <div class="counter-section">
+            <h2>Click Counter</h2>
+            <span id="count">0</span>
+            <div class="btn-group">
+                <button class="btn btn-red" onclick="changeCount(1)">+ 1</button>
+                <button class="btn btn-blue" onclick="changeCount(-1)">− 1</button>
+                <button class="btn btn-teal" onclick="resetCount()">Reset</button>
+            </div>
+        </div>
+
+        <div class="color-box" id="colorBox" onclick="randomizeColor()">
+            🎲 Click me for a random color
+        </div>
+
+        <div class="todo-section">
+            <h2>Quick Todo</h2>
+            <div class="todo-input">
+                <input type="text" id="todoInput" placeholder="Add a task..." onkeydown="if(event.key==='Enter') addTodo()">
+                <button class="btn btn-red" onclick="addTodo()">Add</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+
+    <footer>Random Test Page &mdash; built for fun 🧪</footer>
+
+    <script>
+        let count = 0;
+        const countEl = document.getElementById('count');
+
+        function changeCount(n) {
+            count += n;
+            countEl.textContent = count;
+            countEl.style.transform = 'scale(1.2)';
+            setTimeout(() => countEl.style.transform = 'scale(1)', 100);
+        }
+
+        function resetCount() {
+            count = 0;
+            countEl.textContent = 0;
+        }
+
+        function randomizeColor() {
+            const box = document.getElementById('colorBox');
+            const c1 = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+            const c2 = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+            box.style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
+            box.textContent = `${c1}  →  ${c2}`;
+        }
+
+        function addTodo() {
+            const input = document.getElementById('todoInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const li = document.createElement('li');
+            li.innerHTML = `<span onclick="this.parentElement.classList.toggle('done')" style="cursor:pointer;flex:1">${text}</span>
+                            <button class="delete-btn" onclick="this.parentElement.remove()">✕</button>`;
+            document.getElementById('todo-list').appendChild(li);
+            input.value = '';
+            input.focus();
+        }
+    </script>
+</body>
+</html>

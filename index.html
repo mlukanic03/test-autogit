@@ -50,7 +50,7 @@
         }
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.15);
+            box-shadow: 0 12px 30px rgba(233, 69, 96, 0.15);
             border-color: #e94560;
         }
         .card h3 { color: #e94560; margin-bottom: 0.5rem; }
@@ -69,7 +69,7 @@
             font-size: 4rem;
             font-weight: bold;
             color: #e94560;
-            display: block;
+            display: flex;
             margin: 1rem 0;
             transition: transform 0.1s;
         }
@@ -156,7 +156,7 @@
 </head>
 <body>
     <header>
-        <h1>⚡ Random Test Page</h1>
+        <h1>⚡ Random Test Page for Testing autoGit</h1>
         <p>A little playground with cards, counters, colors & todos</p>
     </header>
 
@@ -177,7 +177,7 @@
         </div>
 
         <div class="counter-section">
-            <h2>Click Counter</h2>
+            <h2>Brojač klikova</h2>
             <span id="count">0</span>
             <div class="btn-group">
                 <button class="btn btn-red" onclick="changeCount(1)">+ 1</button>
@@ -187,7 +187,7 @@
         </div>
 
         <div class="color-box" id="colorBox" onclick="randomizeColor()">
-            🎲 Click me for a random color
+            🎲 Klikni me za nasumičnu boju
         </div>
 
         <div class="todo-section">

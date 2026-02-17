@@ -1,4 +1,5 @@
 {
     "vscode-autoGit.enabled": true,
-    "vscode-autoGit.statusBar": true
+    "vscode-autoGit.statusBar": true,
+    "vscode-autoGit.syncAfterCommit": true
 }

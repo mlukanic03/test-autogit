@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cosmic Coffee</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #faf6f1;
+            color: #2c1810;
+            min-height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 3rem;
+            background: #2c1810;
+            color: #faf6f1;
+        }
+        nav .logo { font-weight: 700; font-size: 1.3rem; }
+        nav .logo span { color: #d4a574; }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        nav a:hover { color: #d4a574; }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem 3rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c1810;
+            margin-bottom: 0.5rem;
+        }
+        .hero h1 span { color: #d4a574; }
+        .hero p { color: #7a6055; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 950px;
+            margin: 2rem auto 4rem;
+            padding: 0 2rem;
+        }
+        .grid-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2rem;
+            box-shadow: 0 2px 15px rgba(44, 24, 16, 0.06);
+            transition: transform 0.2s;
+        }
+        .grid-item:hover { transform: translateY(-3px); }
+        .grid-item .icon { font-size: 2rem; margin-bottom: 0.8rem; }
+        .grid-item h3 { margin-bottom: 0.5rem; color: #2c1810; }
+        .grid-item p { color: #8a7368; font-size: 0.9rem; line-height: 1.6; }
+
+        .stats {
+            background: #2c1810;
+            color: #faf6f1;
+            padding: 3rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat .num { font-size: 2.5rem; font-weight: 700; color: #d4a574; }
+        .stat .label { font-size: 0.85rem; color: #a89080; margin-top: 0.3rem; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #b0a098;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Cosmic <span>Coffee</span> ☕</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#" style="color:#d4a574;">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Our <span>Story</span></h1>
+        <p>Born from a love of great coffee and late-night conversations, Cosmic Coffee has been fueling dreamers and doers since 2019.</p>
+    </div>
+
+    <div class="grid">
+        <div class="grid-item">
+            <div class="icon">🌱</div>
+            <h3>Ethically Sourced</h3>
+            <p>Every bean is hand-selected from small-batch farms across Colombia, Ethiopia, and Guatemala. Fair trade, always.</p>
+        </div>
+        <div class="grid-item">
+            <div class="icon">🔥</div>
+            <h3>Roasted In-House</h3>
+            <p>We roast fresh every morning in small batches to ensure peak flavor in every single cup we serve.</p>
+        </div>
+        <div class="grid-item">
+            <div class="icon">💛</div>
+            <h3>Community First</h3>
+            <p>More than a coffee shop — we're a gathering place for artists, students, remote workers, and everyone in between.</p>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="num">6</div>
+            <div class="label">Years Brewing</div>
+        </div>
+        <div class="stat">
+            <div class="num">1.2M</div>
+            <div class="label">Cups Served</div>
+        </div>
+        <div class="stat">
+            <div class="num">14</div>
+            <div class="label">Origin Countries</div>
+        </div>
+        <div class="stat">
+            <div class="num">4.9★</div>
+            <div class="label">Avg Rating</div>
+        </div>
+    </div>
+
+    <footer>© 2025 Cosmic Coffee. Brewed with love.</footer>
+</body>
+</html>

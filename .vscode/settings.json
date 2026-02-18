@@ -1,7 +1,7 @@
 {
     "vscode-autoGit.enabled": true,
     "vscode-autoGit.statusBar": true,
-    "vscode-autoGit.syncAfterCommit": false,
-    "vscode-autoGit.syncInterval": 1,
+    "vscode-autoGit.syncAfterCommit": true,
+    "vscode-autoGit.syncInterval": 5,
     "vscode-autoGit.syncOnStartup": true,
 }

@@ -1,0 +1,5 @@
+"vscode-autoGit.syncAfterCommit": false -> ne radi pull/push nakon svakog commita (spremanja filea)
+"vscode-autoGit.syncAfterCommit": true -> automatski radi pull/push nakon svakog commitanja
+"vscode-autoGit.syncInterval": 1 -> Vrijednost je u minutama (1). Na svaku minutu odradi se pull/push svega commitanog (spremljenog) do tog trena
+"vscode-autoGit.syncOnStartup": true -> odradi pull/push cim se upali ekstenzija
+"vscode-autoGit.statusBar": true -> dodaje ekstenziju u status bar
